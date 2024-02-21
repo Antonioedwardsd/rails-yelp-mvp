@@ -7,3 +7,13 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+Restaurant.destroy_all # Para limpiar la DB
+
+# Crear 5 restaurantes
+5.times do |i|
+  Restaurant.create(
+    name: "Restaurante #{i+1}",
+    address: "Dirección del Restaurante #{i+1}",
+    category: ["chinese", "italian", "japanese", "french", "belgian"].sample
+  )
+end
